@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "fabric-mod",
+  "version": "0.1",
+  "name": "FabricMod",
+  "description": "This is a minecraft fabric mod for the version 1.19.3 which adds some random items",
+  "authors": [ "MrBlackReal" ],
+  "contact": {
+    "website": "https://mrblackreal.de",
+    "repo": "https://github.com/MrBlackReal/FabricMod"
+  },
+  "license": "MIT",
+  "icon": "assets/fabricmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.mrblackreal.fabricmod.client.Client"
+    ],
+    "server": [
+      "dev.mrblackreal.fabricmod.server.Server"
+    ],
+    "main": [ "dev.mrblackreal.fabricmod.FabricMod" ]
+  },
+  "mixins": [
+    "fabricmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.12",
+    "fabric": "*",
+    "minecraft": "1.19.3"
+  }
+}
