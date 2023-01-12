@@ -1,19 +1,15 @@
 package dev.mrblackreal.fabricmod.client;
 
-import dev.mrblackreal.fabricmod.client.block.BlockManager;
-import dev.mrblackreal.fabricmod.client.item.ItemManager;
+import dev.mrblackreal.fabricmod.block.BlockManager;
+import dev.mrblackreal.fabricmod.item.ItemManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.HashMap;
 
 
 @Environment(EnvType.CLIENT)

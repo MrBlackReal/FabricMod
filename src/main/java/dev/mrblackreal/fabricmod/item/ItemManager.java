@@ -1,4 +1,4 @@
-package dev.mrblackreal.fabricmod.client.item;
+package dev.mrblackreal.fabricmod.item;
 
 import net.minecraft.item.Item;
 

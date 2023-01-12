@@ -1,4 +1,4 @@
-package dev.mrblackreal.fabricmod.client.block;
+package dev.mrblackreal.fabricmod.block;
 
 import net.minecraft.block.Block;
 
