@@ -1,13 +1,11 @@
 package dev.mrblackreal.fabricmod.client;
 
+import dev.mrblackreal.fabricmod.FabricMod;
 import dev.mrblackreal.fabricmod.block.BlockManager;
 import dev.mrblackreal.fabricmod.item.ItemManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 @Environment(EnvType.CLIENT)
 public class Client implements ClientModInitializer {
 
-    private static final Logger logger = LogManager.getLogger(Client.class);
+    private static final Logger logger = LogManager.getLogger(String.format("%s-%s", FabricMod.MOD_ID, Client.class.getSimpleName()));
 
     private static Client instance;
 
