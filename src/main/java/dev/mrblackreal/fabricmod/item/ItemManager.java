@@ -3,13 +3,8 @@ package dev.mrblackreal.fabricmod.item;
 import dev.mrblackreal.fabricmod.FabricMod;
 import dev.mrblackreal.fabricmod.block.BlockManager;
 import dev.mrblackreal.fabricmod.client.Client;
-import dev.mrblackreal.fabricmod.item.items.TestItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -22,8 +17,7 @@ public class ItemManager {
 
     private static final HashMap<ItemGroup, Item> itemHashMap = new HashMap<>();
 
-    public static final Item TEST_ITEM = registerItem(FabricMod.getItemGroup(), "test_item", new TestItem(new FabricItemSettings().maxCount(64)));
-    public static final BlockItem GUNPOWDER_BLOCK_ITEM = (BlockItem) registerItem(ItemGroups.NATURAL, "gunpowder_block", new BlockItem(BlockManager.GUNPOWDER_BLOCK, new Item.Settings().maxCount(64)));
+    public static final BlockItem GUNPOWDER_BLOCK_ITEM = (BlockItem) registerItem(ItemGroups.NATURAL, "gunpowder_block", new BlockItem(BlockManager.GUNPOWDER_BLOCK, new Item.Settings().maxCount(64).recipeRemainder(Items.GUNPOWDER)));
 
     public ItemManager() {
         ItemGroups.getGroups().forEach(group -> {

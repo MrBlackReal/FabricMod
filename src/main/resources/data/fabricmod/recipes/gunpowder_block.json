@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "GGG",
-    "GGG",
-    "GGG"
+    "WWW",
+    "WWW",
+    "WWW"
   ],
   "key": {
-    "G": {
+    "W": {
       "tag": "minecraft:gunpowder"
     }
   },
