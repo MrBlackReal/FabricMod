@@ -17,15 +17,15 @@ public class Client implements ClientModInitializer {
 
     private static Client instance;
 
-    private ItemManager itemManager;
-    private BlockManager blockManager;
+    private static ItemManager itemManager;
+    private static BlockManager blockManager;
 
     @Override
     public void onInitializeClient() {
         instance = this;
 
-        this.itemManager = new ItemManager();
-        this.blockManager = new BlockManager();
+        blockManager = new BlockManager();
+        itemManager = new ItemManager();
 
         logger.info("Initialized clientside mod!");
     }
@@ -38,11 +38,11 @@ public class Client implements ClientModInitializer {
         return instance;
     }
 
-    public ItemManager getItemManager() {
-        return this.itemManager;
+    public static ItemManager getItemManager() {
+        return itemManager;
     }
 
-    public BlockManager getBlockManager() {
+    public static BlockManager getBlockManager() {
         return blockManager;
     }
 }

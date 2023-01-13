@@ -11,7 +11,7 @@ public class FabricMod implements ModInitializer {
 
     public static final String MOD_ID = "fabricmod";
 
-    public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier(MOD_ID, "test_group")).icon(() -> new ItemStack(Items.BOWL)).build();
+    public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier(MOD_ID, "test_group")).icon(() -> new ItemStack(Items.ENDER_DRAGON_SPAWN_EGG)).build();
 
     @Override
     public void onInitialize() {

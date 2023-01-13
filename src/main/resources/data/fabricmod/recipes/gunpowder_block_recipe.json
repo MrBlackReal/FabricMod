@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GGG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+    "item": "fabricmod:gunpowder_block",
+    "count": 1
+  }
+}
