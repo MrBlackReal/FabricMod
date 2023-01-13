@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 @Environment(EnvType.SERVER)
 public class Server implements DedicatedServerModInitializer {
 
-    private static final Logger logger = LogManager.getLogger(Server.class.getSimpleName());
+    private static final Logger logger = LogManager.getLogger(Server.class);
 
     @Override
     public void onInitializeServer() {

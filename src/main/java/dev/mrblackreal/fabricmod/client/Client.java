@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 @Environment(EnvType.CLIENT)
 public class Client implements ClientModInitializer {
 
-    private static final Logger logger = LogManager.getLogger(Client.class.getSimpleName());
+    private static final Logger logger = LogManager.getLogger(Client.class);
 
     private static Client instance;
 
@@ -28,9 +28,6 @@ public class Client implements ClientModInitializer {
 
         this.itemManager = new ItemManager();
         this.blockManager = new BlockManager();
-
-        this.itemManager.getItemHashMap().forEach((itemId, itemObject) -> Registry.register(Registries.ITEM, new Identifier("fabricmod", itemId), itemObject));
-        this.blockManager.getBlockHashMap().forEach((blockId, blockObject) -> Registry.register(Registries.BLOCK, new Identifier("fabricmod", blockId), blockObject));
 
         logger.info("Initialized clientside mod!");
     }

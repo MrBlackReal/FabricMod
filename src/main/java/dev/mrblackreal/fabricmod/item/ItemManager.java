@@ -1,22 +1,25 @@
 package dev.mrblackreal.fabricmod.item;
 
+import dev.mrblackreal.fabricmod.FabricMod;
+import dev.mrblackreal.fabricmod.client.Client;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
 
 public class ItemManager {
 
-    private final HashMap<String, Item> itemHashMap = new HashMap<>();
-
     public ItemManager() {
-        itemHashMap.put("test_item", new Item(new Item.Settings().maxCount(64)));
+        Client.getLogger().info(String.format("Registering items for %s...", FabricMod.MOD_ID));
     }
 
-    private void addItem(String id, Item object) {
-        itemHashMap.put(id, object);
-    }
+    public final Item TEST_ITEM = registerItem("test_item", new Item(new FabricItemSettings().maxCount(64).fireproof()));
+    public final Item SECOND_TEST_ITEM = registerItem("second_test_item", new Item(new FabricItemSettings().maxCount(64).fireproof()));
 
-    public HashMap<String, Item> getItemHashMap() {
-        return itemHashMap;
+    private Item registerItem(String id, Item object) {
+        return Registry.register(Registries.ITEM, new Identifier(FabricMod.MOD_ID, id), object);
     }
 }
