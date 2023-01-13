@@ -1,3 +1,5 @@
 {
-    "item.fabricmod.test_item": "Test item"
+    "itemGroup.fabricmod.test_group": "Test Items",
+    "item.fabricmod.test_item": "Test Item",
+    "item.fabricmod.second_test_item": "Second Test Item"
 }
