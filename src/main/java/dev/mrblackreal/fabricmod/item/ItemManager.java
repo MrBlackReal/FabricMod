@@ -3,6 +3,7 @@ package dev.mrblackreal.fabricmod.item;
 import dev.mrblackreal.fabricmod.FabricMod;
 import dev.mrblackreal.fabricmod.block.BlockManager;
 import dev.mrblackreal.fabricmod.client.Client;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -18,8 +19,11 @@ public class ItemManager {
     private static final HashMap<ItemGroup, Item> itemHashMap = new HashMap<>();
 
     public static final BlockItem GUNPOWDER_BLOCK_ITEM = (BlockItem) registerItem(ItemGroups.NATURAL, "gunpowder_block", new BlockItem(BlockManager.GUNPOWDER_BLOCK, new Item.Settings().maxCount(64).recipeRemainder(Items.GUNPOWDER)));
+    public static final Item CUSTOM_ITEM = Registry.register(Registries.ITEM, new Identifier(FabricMod.MOD_ID, "custom_item"), new Item(new FabricItemSettings()));
 
     public ItemManager() {
+
+
         ItemGroups.getGroups().forEach(group -> {
             final List<Item> items = new ArrayList<>();
 

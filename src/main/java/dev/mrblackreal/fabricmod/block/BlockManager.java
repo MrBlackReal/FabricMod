@@ -21,7 +21,7 @@ public class BlockManager {
 
     private static final HashMap<ItemGroup, Block> blockHashMap = new HashMap<>();
 
-    public static final Block GUNPOWDER_BLOCK = registerBlock(FabricMod.getItemGroup(), "gunpowder_block", new GunpowderBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT)));
+    public static final Block GUNPOWDER_BLOCK = registerBlock(FabricMod.ITEM_GROUP, "gunpowder_block", new GunpowderBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT)));
 
     public BlockManager() {
         ItemGroups.getGroups().forEach(group -> {
